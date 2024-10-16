@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript functions</title>
+</head>
+<body style="text-align: center;">
+    <h1>JavaScript - function to display table of an entered number</h1>
+    <p><input type="text" id="txtNumber" placeholder="Enter Number"></p>
+    <p><input type="button" value="PrintTable" onclick="PrintTable()"></p>
+    <p id="pPrint"></p>
+</br>
+    <h1> JavaScript - function for Converting Celcious to Fahrenheit </h1>
+    <main>
+        <label for="firstValue">Celcious : </label>
+        <input id="firstValue" type='number'>
+        <button onclick="convertion()">CONVERT</button>
+        <br/>  <br/>
+        <label for="secondValue">Fahrenheit: </label>
+        <input id="secondValue" readonly>
+      </main>
+
+</body>
+<script>
+    function PrintTable(){
+        var num;
+        num= Number(document.getElementById('txtNumber').value);
+        for(let i=1;i<=12;i++){
+        let pTag=document.getElementById('pPrint');
+        pTag.innerHTML+=num+"x"+i+"="+(num*i)+"<br>"
+
+        }
+    }
+
+ 
+ function convertion() {
+   let inputValue = document.getElementById('firstValue').value;
+   console.log(inputValue);
+   let result = document.getElementById('secondValue');
+   result.value = (inputValue * 9/5)+32;
+ }
+ 
+</script>
+</html>
